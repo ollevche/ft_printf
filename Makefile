@@ -28,16 +28,16 @@ OBJ		=	$(addprefix $(OBJDIR), $(SRC:.c=.o))
 LIB		=	libft.a
 
 all: $(NAME)
-	ar rs $(NAME) $(OBJ)
 
-$(NAME): $(OBJDIR) $(OBJ) $(LIB)
+$(NAME): $(OBJDIR) $(OBJ) $(LIBDIR)$(LIB)
+	cp $(LIBDIR)$(LIB) ./$(NAME)
+	ar rs $(NAME) $(OBJ)
 
 $(OBJ): $(OBJDIR)%.o : $(SRCDIR)%.c
 	gcc -o $@ -c $< $(FLAGS)
 
-$(LIB):
+$(LIBDIR)$(LIB):
 	make -C $(LIBDIR)
-	cp $(LIBDIR)$(LIB) ./$(NAME)
 
 $(OBJDIR):
 	mkdir $(OBJDIR)
