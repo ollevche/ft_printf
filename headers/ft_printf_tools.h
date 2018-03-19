@@ -13,7 +13,7 @@
 #ifndef FT_PRINTF_TOOLS_H
 # define FT_PRINTF_TOOLS_H
 
-# include "../libft-gnl/headers/libft.h"
+# include "libft.h"
 # include <stdarg.h>
 # include <wchar.h>
 # include <locale.h>

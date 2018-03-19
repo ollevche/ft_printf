@@ -12,7 +12,7 @@
 
 NAME	=	libftprintf.a
 
-FLAGS	=	-Wall -Werror -Wextra -I./headers
+FLAGS	=	-Wall -Werror -Wextra -I./headers -I./libft-gnl/headers
 
 SRCDIR	=	./sources/
 
