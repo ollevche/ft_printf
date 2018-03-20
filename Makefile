@@ -30,24 +30,28 @@ LIB		=	libft.a
 all: $(NAME)
 
 $(NAME): $(OBJDIR) $(OBJ) $(LIBDIR)$(LIB)
-	cp $(LIBDIR)$(LIB) ./$(NAME)
-	ar rs $(NAME) $(OBJ)
+	@echo "upgrading libft.a to libftprintf.a"
+	@cp $(LIBDIR)$(LIB) ./$(NAME)
+	@ar rs $(NAME) $(OBJ)
 
 $(OBJ): $(OBJDIR)%.o : $(SRCDIR)%.c
-	gcc -o $@ -c $< $(FLAGS)
+	@echo "creating printf object files"
+	@gcc -o $@ -c $< $(FLAGS)
 
 $(LIBDIR)$(LIB):
-	make -C $(LIBDIR)
+	@make -C $(LIBDIR)
 
 $(OBJDIR):
-	mkdir $(OBJDIR)
+	@mkdir $(OBJDIR)
 
 clean:
-	make -C $(LIBDIR) clean
-	rm -rf $(OBJ) $(OBJDIR)
+	@make -C $(LIBDIR) clean
+	@echo "removing printf object files"
+	@rm -rf $(OBJ) $(OBJDIR)
 
 fclean: clean
-	make -C $(LIBDIR) fclean
-	rm -rf $(NAME)
+	@make -C $(LIBDIR) fclean
+	@echo "removing libftprintf.a"
+	@rm -rf $(NAME)
 
 re: fclean $(NAME)
