@@ -12,13 +12,13 @@
 
 NAME	=	libftprintf.a
 
-FLAGS	=	-Wall -Werror -Wextra -I./headers -I./libft-gnl/headers
+FLAGS	=	-Wall -Werror -Wextra -I./headers -I./library/headers
 
 SRCDIR	=	./sources/
 
 OBJDIR	=	./objects/
 
-LIBDIR	=	./libft-gnl/
+LIBDIR	=	./library/
 
 SRC		=	ft_printf.c readcom.c runcom.c util.c as_intnum_types.c \
 			as_str_types.c as_extra_types.c
@@ -31,7 +31,7 @@ all: $(NAME)
 
 $(NAME): $(OBJDIR) $(OBJ) $(LIBDIR)$(LIB)
 	@echo "upgrading libft.a to libftprintf.a"
-	@cp $(LIBDIR)$(LIB) ./$(NAME)
+	@mv $(LIBDIR)$(LIB) ./$(NAME)
 	@ar rs $(NAME) $(OBJ)
 
 $(OBJ): $(OBJDIR)%.o : $(SRCDIR)%.c
