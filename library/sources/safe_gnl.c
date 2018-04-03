@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   safe_gnl.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ollevche <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/12 12:37:36 by ollevche          #+#    #+#             */
-/*   Updated: 2018/01/12 13:16:01 by ollevche         ###   ########.fr       */
+/*   Created: 2018/04/03 12:30:09 by ollevche          #+#    #+#             */
+/*   Updated: 2018/04/03 12:30:10 by ollevche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "get_next_line.h"
 
-# include "libft.h"
-
-# define BUFF_SIZE 1024
-
-typedef struct	s_file
+char	*safe_gnl(int fd)
 {
-	int					fd;
-	char				*buf;
-	struct s_file		*next;
-}				t_file;
+	char	*line;
+	int		ret_value;
 
-int				get_next_line(const int fd, char **line);
-char			*safe_gnl(int fd);
-
-#endif
+	line = NULL;
+	ret_value = get_next_line(fd, &line);
+	if (ret_value == -1)
+		ft_memdel((void**)&line);
+	return (line);
+}
