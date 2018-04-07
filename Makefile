@@ -49,8 +49,10 @@ clean:
 	@echo "removing printf object files"
 	@rm -rf $(OBJ) $(OBJDIR)
 
-fclean: clean
+fclean:
 	@make -C $(LIBDIR) fclean
+	@echo "removing printf object files"
+	@rm -rf $(OBJ) $(OBJDIR)
 	@echo "removing libftprintf.a"
 	@rm -rf $(NAME)
 
