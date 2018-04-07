@@ -33,7 +33,7 @@ SRC		=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_strlen.c \
 			ft_putstrarr.c ft_strsort.c ft_wordcount.c ft_strjoinfree.c \
 			ft_imaxtoa.c ft_uimaxtoa.c ft_strtolow.c ft_uitobase.c \
 			ft_strnewchr.c ft_strndup.c ft_wctombs.c get_next_line.c \
-			ft_free_strarr.c ft_strarr_trim.c safe_gnl.c
+			ft_free_strarr.c ft_strarr_trim.c safe_gnl.c skip_lines.c
 
 OBJ 	=	$(addprefix $(OBJDIR), $(SRC:.c=.o))
 
