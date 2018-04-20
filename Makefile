@@ -31,7 +31,7 @@ all: $(NAME)
 
 $(NAME): $(OBJDIR) $(OBJ) $(LIBDIR)$(LIB)
 	@echo "upgrading libft.a to libftprintf.a"
-	@mv $(LIBDIR)$(LIB) ./$(NAME)
+	@cp $(LIBDIR)$(LIB) ./$(NAME)
 	@ar rs $(NAME) $(OBJ)
 
 $(OBJ): $(OBJDIR)%.o : $(SRCDIR)%.c

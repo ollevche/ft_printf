@@ -1,3 +1,4 @@
 /objects/*
 /library/objects/*
+/library/libft.a
 libftprintf.a
