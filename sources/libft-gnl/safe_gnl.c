@@ -19,7 +19,7 @@ char	*safe_gnl(int fd)
 
 	line = NULL;
 	ret_value = get_next_line(fd, &line);
-	if (ret_value == -1)
+	if (ret_value < -1)
 		ft_memdel((void**)&line);
 	return (line);
 }
