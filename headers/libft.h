@@ -103,5 +103,6 @@ void			ft_putstrarr(char **arr);
 void			ft_free_strarr(char ***arr);
 char			**ft_strarr_trim(char **strarr, char c);
 int				ft_ceildiv(int a, int b);
+char			*ft_strjoin_nfree(char *s1, char *s2, int n);
 
 #endif
