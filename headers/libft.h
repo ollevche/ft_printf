@@ -26,6 +26,10 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+/*
+**	standard funcs:
+*/
+
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
@@ -85,6 +89,10 @@ void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
+/*
+**	bonus funcs:
+*/
+
 char			**ft_strsort(char **str);
 char			*ft_imaxtoa(intmax_t n);
 char			*ft_strjoinfree(char *s1, char *s2);
@@ -104,5 +112,6 @@ void			ft_free_strarr(char ***arr);
 char			**ft_strarr_trim(char **strarr, char c);
 int				ft_ceildiv(int a, int b);
 char			*ft_strjoin_nfree(char *s1, char *s2, int n);
+t_uint			ft_byte_to_uint(t_uchar b1, t_uchar b2, t_uchar b3, t_uchar b4);
 
 #endif
