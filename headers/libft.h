@@ -112,6 +112,7 @@ void			ft_free_strarr(char ***arr);
 char			**ft_strarr_trim(char **strarr, char c);
 int				ft_ceildiv(int a, int b);
 char			*ft_strjoin_nfree(char *s1, char *s2, int n);
-t_uint			ft_byte_to_uint(t_uchar b1, t_uchar b2, t_uchar b3, t_uchar b4);
+unsigned int	ft_byte_to_uint(unsigned char b1, unsigned char b2,
+									unsigned char b3, unsigned char b4);
 
 #endif

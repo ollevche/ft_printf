@@ -12,9 +12,10 @@
 
 #include "libft.h"
 
-t_uint	ft_byte_to_uint(t_uchar b1, t_uchar b2, t_uchar b3, t_uchar b4)
+unsigned int	ft_byte_to_uint(unsigned char b1, unsigned char b2,
+									unsigned char b3, unsigned char b4)
 {
-	t_uint	num;
+	unsigned int num;
 
 	num = b1 << 24 | b2 << 16 | b3 << 8 | b4;
 	return (num);
