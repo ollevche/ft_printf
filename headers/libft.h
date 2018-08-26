@@ -115,5 +115,6 @@ char			*ft_strjoin_nfree(char *s1, char *s2, int n);
 unsigned int	ft_byte_to_uint(unsigned char b1, unsigned char b2,
 									unsigned char b3, unsigned char b4);
 int				ft_isnumber(char *str);
+void			*ft_intset(int *b, int c, size_t len);
 
 #endif
