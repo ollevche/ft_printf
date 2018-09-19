@@ -116,5 +116,6 @@ unsigned int	ft_byte_to_uint(unsigned char b1, unsigned char b2,
 									unsigned char b3, unsigned char b4);
 int				ft_isnumber(char *str);
 void			*ft_intset(int *b, int c, size_t len);
+int				ft_check_str(char *str, char *valid);
 
 #endif
