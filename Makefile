@@ -40,7 +40,7 @@ LIBSRC	=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_strlen.c \
 			ft_strnewchr.c ft_strndup.c ft_wctombs.c get_next_line.c \
 			ft_free_strarr.c ft_strarr_trim.c safe_gnl.c skip_lines.c ft_ceildiv.c \
 			ft_strjoin_nfree.c ft_byte_to_uint.c ft_isnumber.c ft_intset.c \
-			ft_check_str.c
+			ft_check_str.c ft_strtrim_free.c
 
 PFOBJ	=	$(addprefix $(OBJDIR), $(PFSRC:.c=.o))
 
