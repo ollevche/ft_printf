@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int ft_check_str(char *str, char *valid)
+int	ft_check_str(char *str, char *valid)
 {
 	if (!str)
 		return (0);
